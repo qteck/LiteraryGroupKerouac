@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'cinzel'; /*.slavna, slavna literarni skupina kerouac*/
+    src: url('../../fonts/cinzel-regular.otf'); 
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+body { padding-top: 70px; background-color: #eee !important;}
+footer {padding: 30px 0 60px 0;}
+
+
+.center-white { background-color: #fff; }
+
+
+@media screen and (min-width: 480px) {
+        body {padding: 70px 10% 0 10%;}
+}
+
+.menu-title { font-weight: bold; padding: 20px 6px 10px 6px;border-bottom: 1px solid #ccc;margin-bottom: 10px;}
+.btn-margin { margin: 0 0 20px 0 !important}
+.draft-margin{ margin: 0 0 10px 0 !important}
+.p-padding { padding: 6px 0px; border-top: 1px solid #eee;border-bottom: 1px solid #eee;}
+
+#datetime {}
+.panel{margin-bottom: 8px !important;}
+.padding-letters-words{ padding: 0 0 20px 0 !important; }
+.center-padding-bottom {padding-bottom:  60px; }
+.toggleTitleAndDescription{border-bottom: 2px solid #ccc;padding: 2px;margin-bottom: 2px}
+
+
+/* modal */
+.grid4 iframe{width: 100%; height: 180px;border: 0;}
+.grid4{font-family: Arial;line-height: 1.5em;word-spacing: 2px;font-size: 14px;padding-top: 10px;}
+.grid8{padding-bottom:  60px;}
+.modal article {margin-top: 60px;color: #333}
+.grid8 h2{font-family: cinzel;font-size: 42px;margin: 0;padding: 0 0 22px 0 !important;}
+.grid4 strong{font-size: 18px;color: #383724;display: block; margin-bottom: 10px;}
+.functionality{padding: 10px 6px;}
+/*//////*/
+
+
+
+#ajaxStoryLine form textarea {height: 300px;}
+.alertAjaxState{margin: 0 30px;font-size: 26px}
+.functionality{padding-top: 20px;}
+
+@keyframes blink {50% { color: transparent }}
+.loader__dot { animation: 1s blink infinite; font-weight: bold }
+.loader__dot:nth-child(2) { animation-delay: 250ms; font-weight: bold }
+.loader__dot:nth-child(3) { animation-delay: 500ms; font-weight: bold }
