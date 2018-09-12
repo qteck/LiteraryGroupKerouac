@@ -2,57 +2,37 @@
 
 @section('content')
 
-<div class="row row-margin">
+<div class="row">
+    <div class="col-md-4">
 
-    <div class="col-sm-4 grid4">
-        <div class="row">
-            <div class="container-fluid">
-                <strong>{{ $photos->created_at->format('d.m.Y') }}  <br> {{ $photos->place }}</strong>
-            </div>
-        </div>
-        <hr class="divider">
+        <blockquote class="blockquote ">
+            <p class="m-b-0">
+                I think good dreaming is what leads to good photographs.
+                                <footer class="blockquote-footer"><cite title="Source Title">Wayne Miller</cite></footer>
+            </p>
+                </blockquote>       
 
-        <div class="row">
-            <div class="container-fluid">
-                <strong>Obsah ve stručnosti</strong>
-                <p>
-                {{ $photos->content_in_brief }}
-                </p>
-            </div>
-        </div>
-        <hr class="divider">
-        
-        @if (!empty($photos->music))
-        <div class="row">
-            <div class="container-fluid">
-                <strong>Doporučený poslech</strong>
-                <iframe
-                accesskey="" src="{{ $photos->music }}">
-            </iframe>
-            </div>
-        </div>
-        <hr class="divider">
-        @endif
     </div>
+    <div class="col-md-8"><h2>Galerie: {{ $photos->title }}</h2></div>
+</div>
 
 
-
-<div class="col-sm-8 grid8 margin-as-fuck">
-    <h2>{{ $photos->title }}</h2>
+<div class="row">
+<div class="container-fluid row-margin">
     
-    
-    <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+    <div class="picture" style="" itemscope itemtype="http://schema.org/ImageGallery">
         @foreach ($photos->photos as $photo)
  
-            <figure class="col-lg-3 col-md-4 col-xs-6 img-padding" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <figure style="float: left;margin-right: 1%; margin-bottom: 0.5em;"  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="{{ asset('/storage/'. $photo->title) }}" itemprop="contentUrl" data-size="1000x667" data-index="1">
-                    <img src="{{ asset('/storage/'. $photo->title) }}" class="img-responsive" height="400" width="600" itemprop="thumbnail" alt="">
+                    <img src="{{ asset('/storage/'. $photo->title) }}" style="height: 200px;" class="img-responsive"itemrop="thumbnail" alt="">
                 </a>
             </figure>
         
         @endforeach
     </div>
       
+</div>
 </div>
 
 

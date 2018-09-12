@@ -56,6 +56,34 @@
                     <li><a href="{{ url('/') }}/admin/dealer/add-gallery"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Add gallery</a></li>
                 </ul>
              </li>
+            <li>
+                   <a href="{{ url('/') }}/admin/dealer/orders">
+                      <span class="glyphicon glyphicon-usd"></span>
+                      <span class="glyphicon glyphicon-usd"></span>
+                      <span class="glyphicon glyphicon-usd"></span>
+                      <span class="glyphicon glyphicon-usd"></span>
+                   </a>
+             </li>
+            <li class="dropdown">
+                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       Manage tours
+                       <span class="caret"></span>
+                   </a>
+                 <ul class="dropdown-menu">
+                    <li><a href="{{ url('/') }}/admin/dealer/add-event"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Add an event</a></li>
+                    <li><a href="{{ url('/') }}/admin/dealer/list-of-events"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> List of events</a></li>
+                </ul>
+             </li>
+            <li class="dropdown">
+                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       Manage books
+                       <span class="caret"></span>
+                   </a>
+                 <ul class="dropdown-menu">
+                    <li><a href="{{ url('/') }}/admin/dealer/books/add"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Add a book</a></li>
+                    <li><a href="{{ url('/') }}/admin/dealer/books/list"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> List of books</a></li>
+                </ul>
+             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">

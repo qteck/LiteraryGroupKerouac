@@ -33,10 +33,32 @@
      - .png and .svg icons sprite, 
      - preloader.gif (for browsers that do not support CSS animations) -->
 	<link rel="stylesheet" href="{{ url('/') }}/vendor/photoswipe/default-skin/default-skin.css">
+	<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 	<header>
+		<div class="header-title">
+			<div>
+				<h1 class="slavna">
+                <a href="home">Slavná literární<br> skupina Kerouac</a>
+            </h1>
+				<SPAN>
+				1968 
+				</SPAN>
+			</div>
+		</div>
+	</header>
+	<div class="article-container padding-as-fuck">
+	<article class="container-fluid">
 		<nav class="navbar navbar-default nav-restyle">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -49,44 +71,49 @@
 					</button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div  style="text-align: center;" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav text-menu-style">
 						<li><a href="{{ url('/')  }}/">HOME</a>
+						</li>
+						<!--<li><a href="{{ url('/')  }}/knihy">KNIHY</a>
 						</li>
 						<li class="active nav-active-restyle">
 							<a href="{{ url('/')  }}/manifest">MANIFEST<span class="sr-only">(current)</span></a>
 						</li>
 						<li><a href="{{ url('/')  }}/clanky">ČLÁNKY</a>
-						</li>
+						</li>-->
 						<li><a href="{{ url('/')  }}/literarni-tour">LITERÁRNÍ TOUR</a>
-						</li>
+						</li><!--
 						<li><a href="{{ url('/')  }}/galerie">GALERIE</a>
 						</li>
 						<li><a href="http://evelinka.kerouac.cz">UŽIVATELSKÁ SEKCE <span class="glyphicon glyphicon-grain"></span></a>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
-		<div class="header-title">
-			<div>
-				<h1 class="slavna">
-                <a href="home">Slavná literární<br> skupina Kerouac</a>
-            </h1>
-				<SPAN>On The Road</SPAN>
-			</div>
-		</div>
-	</header>
-	<div class="article-container" style="    background-repeat: no-repeat;background-position: center center;background-size: cover;background-image: url('images/map.png');">
-	<article class="container">
+
+
 		@yield('content')
 	</article>
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted row-margin"> ∞ 2013 - 2016 Slavná literární skupina Kerouac, kerouac.cz | <a href="https://www.facebook.com/literarniSkupinaKerouac/">Slavná skupina na FB</a>
+			<p class="text-muted row"> 
+			  <div class="col-sm-10">
+				∞ 2013 - {{ $year }} Slavná literární skupina Kerouac, kerouac.cz | Last update: 29.08.{{ $year }} 
+			  </div>
+			  <div class="col-sm-2 text-right">
+				<img src="/images/facebook.png"> :
+				<a href="https://www.facebook.com/literarniSkupinaKerouac/">
+					<img src="/images/cz-flag.png">
+				</a> 
+				<a href="https://www.facebook.com/TheFamousLiteraryGroup/">
+					<img src="/images/en-flag.png">
+				</a>
+			  </div>
 			</p>
 		</div>
 	</footer>

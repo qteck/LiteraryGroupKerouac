@@ -21,7 +21,8 @@
 	<div class="col-lg-3 col-md-4 col-xs-6 img-padding">
 		<div class="thumbnail-border">
 			<a href="{{ url('/') }}/galerie-prohlidka/{{ $gallery->id }}">
-                            <img class="img-responsive" src="{{  asset('/storage/'. $gallery->photos->first()->title) }}">
+                            <img class="img-responsive" 
+                            src="@if(!empty($gallery->photos->first()->title)){{ asset('/storage/'. $gallery->photos->first()->title) }}@else{{ asset('/storage/0') }}@endif">
 			</a>
 			<div class="img-description">{{ $gallery->title }}</div>
 		</div>

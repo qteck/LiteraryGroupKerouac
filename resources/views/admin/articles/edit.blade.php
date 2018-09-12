@@ -244,6 +244,7 @@ $(document).ready(function() {
         }
     });
     var summernote1Chars = 0;
+    
     $('#summernote1').summernote({
         placeholder: 'and carry on with your article...',
         height: 500,

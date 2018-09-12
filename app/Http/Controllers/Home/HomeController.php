@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
-// use DB; not needed with the lower line
 use App\Article;
 
 class HomeController extends Controller
 {
     function index() {
-    	$articles = Article::all();
+    	$current_time = Carbon::now();
+        $articles = Article::where('scheduled', '<=', $current_time)
+                                                ->where('status', '=', 'published')
+                                                ->orderBy('scheduled', 'desc')->get();
 
     	return view('home.home', compact('articles'));
     }
