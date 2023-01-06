@@ -1,0 +1,5 @@
+/config
+.env
+/vendor
+/storage
+/tests

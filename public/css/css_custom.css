@@ -1,0 +1,109 @@
+
+@font-face {
+    font-family: 'domine'; /*nav*/
+    src: url('../fonts/domine-regular.ttf');
+}
+@font-face {
+    font-family: 'cinzel'; /*.slavna, slavna literarni skupina kerouac*/
+    src: url('../fonts/cinzel-regular.otf'); 
+}
+
+@media only screen and (min-width: 1280px) {
+    header {
+
+
+        background: #fff2c4 url('../images/headBackground.jpg') no-repeat top left;
+  background-size: cover;
+  background-position: center;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-restyle {margin: 0 20px 30px 20px; background: transparent; border: 0;}
+    header p {text-align: center}
+    nav .navbar-nav a:hover {border-bottom: 2px solid #62614a;color: #464536 !important;}
+    nav .nav-active-restyle>a {background-color: transparent !important;}
+    nav .navbar-nav a {padding: 20px 0px 4px 0px !important;margin: 0 22px;color: #59564f !important;}
+    nav .navbar-brand-restyle{padding: 20px 0px 8px 0px !important;margin: 0 20px;}
+    nav .text-menu-style a {font-size: 15px;font-weight: 400; color: #6C5313 !important;}
+    nav .text-menu-style {font-size: 15px;font-weight: 400; color: #7a6b44 !important; font-family: domine;}
+    article {padding: 20px 40px !important}
+
+    nav li{display: inline !important;height: 40px}
+    .padding-as-fuck{padding-left: 60px !important;padding-right: 60px !important;}
+
+    .navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    nav .navbar-nav a {border-bottom: 1px solid #bbb294;color: #464536 !important;}
+    nav .nav-active-restyle>a {background-color: #e9e0bf !important;}
+    .navbar-toggle{background-color: #e9e0bf !important; border: 1px solid #bbb294 !important;}
+    .nav-restyle {background: #e3d296; border: 0;}
+
+}
+
+body{ background-color: #F9F9F9; }
+nav a {font-family: domine;}
+
+header{
+height: 465px;
+background: #fff2c4 url('../images/headBackground.jpg') no-repeat top left;
+  background-size: cover;
+  background-position: center;
+}
+        
+
+.header-title{width: 100%;margin: 0 0;}
+.header-title span{letter-spacing: 2px; font-weight: bold; color: #E1E1E1;}
+.header-title div {text-align: center;}
+.slavna{font-family: cinzel;font-size: 3.2em; font-weight: 900;padding: 10% 0 1% 0;}
+.slavna a {color: #2e364a;text-decoration: none;}
+
+.infinite-eight{font-size: 28px;color: white !important;margin: 40px 0;}
+.header-text{font-size: 17px;font-family:times new roman !important;font-style: italic;}
+
+article {-webkit-box-shadow: 3px -1px 4px -1px rgba(0,0,0,0.14);
+-moz-box-shadow: 3px -1px 4px -1px rgba(0,0,0,0.14);
+box-shadow: 3px -1px 4px -1px rgba(0,0,0,0.14);
+
+    border: 1px solid #E4E4E4;position: relative; top: -20px;padding-top: 30px;background-color: white;color: #333}
+h2{font-family: cinzel;font-size: 42px;margin: 0;padding: 0 0 22px 0 important;}
+h1{padding: 0;margin:0;}
+.grid4{font-family: Arial;line-height: 1.5em;word-spacing: 2px;font-size: 14px;padding: 10px 0 0 60px;}
+.grid4 strong{font-size: 18px;color: #383724;display: block; margin-bottom: 10px;}
+.grid8 h2 a{color: black;text-decoration: none;}
+.grid8 {padding-right:}
+
+
+.nav-symbol-sign{width: 20px;height: 22px;}
+
+.grid4 iframe{width: 100%; height: 180px;border: 0;}
+
+
+article .grid8,.manifest p{margin-bottom: 20px;font-family: 'PT Serif', serif; word-spacing: 2px; font-size: 16px; font-weight: lighter;line-height: 1.8;}
+article p{text-align: justify;}
+.version{border-bottom: 1px solid #eee;padding: 10px 0;margin: 10px 0;}
+
+.thumbnail-border{border: 1px solid #ccc;}
+.img-description{padding: 15px;text-align: center;}
+.img-padding{padding: 0 20px 40px 0 !important}
+
+.article-months{margin: 0;padding: 0;background-color: #ccc;padding: 20px 30px;}
+.article-months li{display: inline;padding: 10px 40px 10px 0; white-space: nowrap;}
+.article-months-margin {margin-bottom: 40px; }
+.margin-sm-device{margin-top: 20px;}
+
+footer .container{border-top: 1px solid #eee; padding: 20px 0 40px 0;}
+footer .container a {text-decoration: none;}
+footer .container img {border: 1px solid black;}
