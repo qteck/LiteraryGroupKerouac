@@ -1,0 +1,16 @@
+﻿{block content}
+
+<h1 n:block="title">Upload</h1>
+    
+    {foreach $flashes as $flash}
+        <p class="flash_{$flash->type}">{$flash->message}</p>
+    {/foreach}
+    
+    {control uploadForm}
+
+<style>
+    h1{ margin-bottom: 20px; }
+    #galleries{ table-layout:fixed; border-collapse: collapse; border: 1px solid grey; }
+    #galleries td{ padding: 6px 10px; }
+</style>
+{/block}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Webová stránka literární skupiny Kerouac!">
+  <meta name="robots" content="{$robots}" n:ifset="$robots">
+
+  <title>{block #title|stripTags|stripHtml}Literární skupina Kerouac{/block} | Kerouac.cz</title>
+
+
+
+  <meta property="og:title" content="{include #title|stripTags|stripHtml}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://kerouac.cz/" />
+  <meta property="og:image" content="http://kerouac.cz/images/logo.png" />
+  <meta property="og:site_name" content="Literární skupina Kerouac.cz" />
+  <meta property="fb:admins" content="1167244233" />
+  <meta property="fb:page_id" content="104558276375278" />
+  <meta property="fb:app_id" content="202220923247121"/>
+
+  <link rel="stylesheet" href="{$basePath}/css/screen.css">
+  <link rel="shortcut icon" href="{$basePath}/favicon.ico">
+
+  <script src="{$basePath}/js/netteForms.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          <link rel="stylesheet" href="{$basePath}/js/colorbox/colorbox.css">
+        <script src="{$basePath}/js/colorbox/jquery.colorbox-min.js"></script>
+
+  {block head}{/block}
+</head>
+  <style>
+      
+  </style>
+<body>
+
+<script>
+
+</script>
+
+     <div id="container">
+          <div id="header">
+            <div id="v1">
+              <a href="{link Homepage:}"><img src="{$basePath}/images/logo.png" alt="Server literární skupiny Kerouac"></a>
+            </div>
+
+            <div id="header-logo">
+              <a href="{link Homepage:}"><img src="{$basePath}/images/logo.png" alt="Server literární skupiny Kerouac"></a>
+              <div id="kerouac_text"></div>  
+            </div>
+
+            <img id="narrow-img" src="{$basePath}/images/hidden_arrow.png" alt="Šipka skrývající rozptylující se text">
+
+
+            <script>
+              $("#narrow-img").click(function () 
+              {
+                if ($("#header-logo").is(":hidden")) 
+                {
+                  $("#header-logo").slideDown("slow", function () 
+                  {
+                    $("#narrow-img").attr('src', {$basePath}+'/images/hidden_arrow.png');
+                    $("#v1").slideUp("slow","linear");
+                  });
+                } 
+                else 
+                {
+                  $("#header-logo").slideUp("slow", function () 
+                  {
+                    $("#narrow-img").attr('src', {$basePath}+'/images/hidden_arrow_open.png');
+                    $("#v1").slideDown("slow","linear");
+                  });
+                }
+              });
+            </script> 
+          </div>
+
+          
+          <div id="section00">
+              
+            <div id="vintage"></div>
+              
+            <div id="nav">
+              <ul id="section0">
+                <li><a href="{link Manifest:}">Manifest</a></li>
+                
+                <li><a href="{link Galerie:}">Galerie</a></li>
+              </ul>
+              <ul id="section1">
+                <li><a href="{link Homepage:}">Hlavní stránka</a></li>
+              </ul>
+            </div>
+              
+            <div id="article">
+                
+                <p n:if="$user->isLoggedIn()">
+                    Přihlášený uživatel: {$user->getIdentity()->name} ({$user->getIdentity()->id}) 
+                    <br>
+                    <a href="{plink LogIn:out}">
+                        Odhlásit se
+                    </a>
+                </p>
+                             
+                
+                <div id="admin_menu" n:if="$user->isLoggedIn()">
+                    <a href="{link Upload:}">Galerie - upload</a>
+                </div>
+                
+              {include #content}    
+
+            </div>
+          </div>
+          
+          <div id="footer">
+            &copy; 21.12.2012 <a href="http://www.kerouac.cz">Kerouac.cz</a>: Literární skupina | info@kerouac.cz | <a href="https://www.facebook.com/pages/Liter%C3%A1rn%C3%AD-skupina-Kerouac/104558276375278?fref=ts">l.s. Kerouac na FB</a><br>
+            Created by <a href="http://www.empyrea.cz">Empyrea.cz</a>
+          </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+﻿{block content}
+
+<h1 n:block="title">{$gallery->name}</h1>
+<span>{$gallery->added|date:'j.n.Y'}</span>
+
+<p>{$gallery->caption}</p>
+
+<p>
+    {foreach $flashes as $flash}
+        <div class="flash_{$flash->type}">{$flash->message}</div>
+    {/foreach}
+    
+    <a n:foreach="$pictures as $picture" class='group1' href="{$basePath}/images/galleries/{$picture->id_gallery}/original/{$picture->name}" style="margin:0 10px 10px 0;" title="{$picture->caption}">
+        <img src="{$basePath}/images/galleries/{$picture->id_gallery}/resized/{$picture->name}" style="width: 100px;height: 100px;" alt="{$picture->caption} | Kerouac.cz">
+    </a>
+    
+</p>   
+
+<script src="{$basePath}/js/colorbox/colorbox.ready.js"></script>
+<style>
+    .group1 img{ border: 1px solid #CCCCCC; }
+</style>
+{/block} 

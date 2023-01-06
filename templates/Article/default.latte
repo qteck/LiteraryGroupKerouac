@@ -1,0 +1,10 @@
+﻿{block content}
+
+<h1 n:block="title">{$article->title}</h1>
+
+<span style="font-size: 12px;">{$article->added|date:'j.n.Y'|noescape} | <a href="{plink Profil: $article->ref('id_author')->id}-{$article->ref('id_author')->name|webalize}">{$article->ref('id_author')->name}</a></span>
+
+{$article->text|noescape}
+
+
+{/block}

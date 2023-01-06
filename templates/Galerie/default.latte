@@ -1,0 +1,40 @@
+﻿{block content}
+
+<h1 n:block="title">Galerie</h1>
+
+<main style="margin-top: 16px;">
+     {foreach $flashes as $flash}
+         <div class="flash_{$flash->type}">{$flash->message}</div>
+     {/foreach}
+    
+    <div n:foreach="$galleries as $gallery" class="gallery_section">
+        
+        {php $relatedPicture = $gallery->related('gallery_pictures')->limit(1)->fetch();}
+        {php $relatedName = $relatedPicture ? $relatedPicture->name : NULL}
+        
+        <h3><a href="{plink UkazGalerii: $gallery->id}-{$gallery->name|webalize}">{$gallery->name}</a></h3>
+        <a href="{plink UkazGalerii: $gallery->id}-{$gallery->name|webalize}">
+            <img src="{$basePath}/images/{$relatedName?'galleries/'.$gallery->id.'/resized/'.$relatedName:'empty_gallery.png'}" alt="fotos">
+        </a>
+        
+        <div class="content">{$gallery->related('gallery_pictures')->count('*')} obrázků</div>
+        <div class="created">{$gallery->added|date:'j.n.Y'}</div>
+    </div>
+
+   <div class="clear_both"></div>
+
+</main>
+<style>
+    .rytbaH2{ padding: 20px 0 0 0; margin: 0;}
+    .fotografieH2{ padding: 30px 0 20px 0; margin: 0;}
+    
+    .gallery_section{ float:left;width: 197px;margin:0 16px 16px 0; }
+    .gallery_section h3{ height: 30px;font-size: 18px;line-height: 1;text-align: center; }
+    .gallery_section a img{ width: 197px;height: 200px;border: 1px solid #ccc; }
+    .gallery_section .content{ float: left;font-size: 12px;color: grey; }
+    .gallery_section .created{ text-align: right;font-size: 12px;color: grey; }
+    
+    .clear_both{ clear: both; }
+</style>
+
+{/block} 
