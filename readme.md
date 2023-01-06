@@ -1,8 +1,8 @@
-# The Famous Literary Group Kerouac
+# Slavná literární skupina
 
-The Famous Literary Group is an international branch out of the Czech literary group Slavná literární skupina Kerouac founded in 2011.
+The Famous Literary Group (Slavná literární skupina) is a community of writers publishing under one name. The group was founded in the Czech Republic in 2011.
 
-The website is a publishing system that implements interface that allows independent writers who are part of the literary group to register and to publish articles or books. 
+The website is a publishing system that implements features that allow independent writers who are part of the literary group to register and to publish articles or books. 
 
 The system also implements: 
 - a simple eshop using paypal gate and selling records 
@@ -12,7 +12,7 @@ The web page has been recently reprogrammed and uses Laravel framework, bootstra
 
 The original version of the system was written in NETTE and is available to view in the branch LiteraryGroupKerouac. 
 
-Official website: https://kerouac.cz
+Official Website: https://kerouac.cz
 
 
 
