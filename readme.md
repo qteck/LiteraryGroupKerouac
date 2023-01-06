@@ -12,7 +12,7 @@ The web page has been recently reprogrammed and uses Laravel framework, bootstra
 
 The original version of the system was written in NETTE and is available to view in the branch LiteraryGroupKerouac. 
 
-Official website: http://kerouac.cz
+Official website: https://kerouac.cz
 
 
 
